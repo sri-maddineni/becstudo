@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../js/plamaterials.js"></script>
   <style>
 
         .dropdown:hover .dropdown-menu{
@@ -79,6 +80,7 @@
             <!-- Submenu for Awaz -->
             <ul class="submenu">
               <li><a class="dropdown-item" href="#">Y20</a></li>
+              <li><a class="dropdown-item" href="#">Y21</a></li>
             </ul>
           </li>
          
@@ -119,7 +121,7 @@
                 <li class="nav-item dropdown active">
                     <a class="nav-link me-auto text-white p-2" href="#" data-bs-toggle="dropdown"> About  </a>
                      <ul class="dropdown-menu">
-                       <li><a class="dropdown-item" href="developers.html"> Developers</a></li>
+                       <li><a class="dropdown-item" href="html/developers.html"> Developers</a></li>
                        <li><a class="dropdown-item" href="#"> Y21 </a></li>
                        <li><a class="dropdown-item" href="#"> Y22 </a></li>
                        <li><a class="dropdown-item" href="#"> Y23 </a></li>
@@ -139,83 +141,11 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script>
-    // Initialize Firebase
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/plamaterials.js"></script>
 
-    
-    var firebaseConfig = {
-          apiKey: "AIzaSyBSd0FFY4jYumI731SXaZ1RpAEXsrp6fog",
-          authDomain: "bec-hostels-64d05.firebaseapp.com",
-          databaseURL: "https://bec-hostels-64d05-default-rtdb.firebaseio.com",
-          projectId: "bec-hostels-64d05",
-          storageBucket: "bec-hostels-64d05.appspot.com",
-          messagingSenderId: "174951857966",
-          appId: "1:174951857966:web:abe5f329cb70d6c01ac4bf",
-          measurementId: "G-9J50LVPRKQ"
-    };
-    firebase.initializeApp(firebaseConfig);
+  
 
-    // Get the Firestore database instance
-    var db = firebase.firestore();
-
-    
-
-    // Retrieve documents from Firestore
-    db.collection("/Documents/y20/pla").orderBy("title","asc").get().then(function(querySnapshot) {
-      var documentsDiv = document.getElementById("documents");
-
-      querySnapshot.forEach(function(doc) {
-        var documentData = doc.data();
-
-        var d1=document.createElement("div");
-        d1.className="card";
-
-        var d2=document.createElement("div");
-        d2.className="row no-gutters";
-
-        var d3=document.createElement("div");
-        d3.className="col-md-4";
-
-        var d4=document.createElement("div");
-        d4.className="col-md-8";
-
-        var d5=document.createElement("div");
-        d5.className="card-body";
-
-        var title=document.createElement("h5");
-        title.className="card-title";
-        title.textContent=documentData.title;
-
-        var des=document.createElement("p");
-        des.textContent=documentData.des;
-        des.className="card-text";
-
-
-        var link = document.createElement("a");
-        link.textContent = "Click to open file" 
-        link.href = documentData.link
-        link.target = "_blank"; // Opens the link in a new tab/window
-
-
-      
-        
-        d2.appendChild(d3);
-        
-
-        d5.appendChild(title);
-        d5.appendChild(des);
-        d5.appendChild(link);
-        
-
-        d4.appendChild(d5);
-        d2.appendChild(d4);
-
-        d1.appendChild(d2);
-        
-        documentsDiv.appendChild(d1);
-      });
-    });
-  </script>
 
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
@@ -297,9 +227,6 @@
       
       
       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
