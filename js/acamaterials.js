@@ -1,4 +1,9 @@
-var firebaseConfig = {
+function getm(){
+
+  document.getElementById("documents").innerHTML=""
+
+  
+  var firebaseConfig = {
     apiKey: "AIzaSyBSd0FFY4jYumI731SXaZ1RpAEXsrp6fog",
     authDomain: "bec-hostels-64d05.firebaseapp.com",
     databaseURL: "https://bec-hostels-64d05-default-rtdb.firebaseio.com",
@@ -9,16 +14,39 @@ var firebaseConfig = {
     measurementId: "G-9J50LVPRKQ"
 };
 
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}else {
+  firebase.app(); // if already initialized, use that one
+}
 
-firebase.initializeApp(firebaseConfig);
 
 // Get the Firestore database instance
 var db = firebase.firestore();
 
 
+var reg=document.getElementById("reg").value;
+if(!reg.length){
+  alert("Reg no should not be empty")
+}
+else if(reg[0].toLowerCase()=='l'){
+  var x = (parseInt(reg.substring(1,3), 10) - 1).toString();
+  reg='y'+x+reg.substring(3,6)
+}
+
+reg=reg.toLowerCase();
+var batch=reg.substring(0,3);
+var branch=reg.substring(3,6);
+
+console.log(batch,branch);
+
+document.getElementById("reg").value=""
+
+
+
 
 // Retrieve documents from Firestore
-db.collection("/Documents/y20/ait").orderBy("title","asc").get().then(function(querySnapshot) {
+db.collection("/Documents/"+batch+"/"+branch).orderBy("title","asc").get().then(function(querySnapshot) {
 var documentsDiv = document.getElementById("documents");
 
 querySnapshot.forEach(function(doc) {
@@ -72,3 +100,5 @@ querySnapshot.forEach(function(doc) {
   documentsDiv.appendChild(d1);
 });
 });
+
+}
