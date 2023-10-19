@@ -56,8 +56,8 @@
     </style>
 </head>
 <body>
-  <header class="bg-dark text-white text-center py-2">
-    <h1 class="mt-3">Developers <br> <span style="font-size:medium;">of</span> <br><span><h5>BEC Studo</h5></span></h1>
+  <header class="bg-dark text-white text-center py-4">
+    <h1 class="mt-3">BEC Studo</h1>
   </header>
   
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="--bs-bg-opacity: .8;">
@@ -140,7 +140,7 @@
                <li><a class="dropdown-item" href="../html/othercollegeplacements.html"> Other College placements</a></li>
              -->
              <li><a class="dropdown-item" href="../html/coupons.html"> Coupons </a></li>
-             <li><a class="dropdown-item" href="../html/services.html"> Services </a></li>
+             <li><a class="dropdown-item disabled" href="../html/services.html"> Services </a></li>
 
              
            </ul>
@@ -200,7 +200,7 @@
     
 
     // Retrieve documents from Firestore
-    db.collection("/becstuoweb/LrDv2RTip9KyXgQbrnk0/dev").orderBy("position").get().then(function(querySnapshot) {
+    db.collection("/App/menu2/services").orderBy("title","asc").get().then(function(querySnapshot) {
       var documentsDiv = document.getElementById("documents");
 
       querySnapshot.forEach(function(doc) {
@@ -223,7 +223,7 @@
         image.className="card-img";
         image.alt="picture";
         image.setAttribute("style","width:150px");
-
+        
         var d4=document.createElement("div");
         d4.className="col-md-8";
 
@@ -231,78 +231,53 @@
         d5.className="card-body";
 
         var name=document.createElement("h2");
-        name.textContent=documentData.name;
+        name.textContent=documentData.title;
         name.className="card-text";
 
         var accomplishment=document.createElement("h4");
         accomplishment.className="card-title";
-        accomplishment.textContent=documentData.accomplishment;
+        accomplishment.textContent=documentData.call;
 
 
         var college=document.createElement("p");
-        college.textContent=documentData.college;
+        college.textContent=documentData.des;
         college.className="card-text";
-
-        var status=document.createElement("p");
-        status.className="card-title";
-        status.textContent='Status: '+documentData.status;
 
         // Create a container div element
 const d6 = document.createElement("div");
 
 
-const icon = document.createElement("i");
-icon.className = "fa fa-linkedin me-3 fa-2x"; 
-icon.style.fontSize = "20px"; 
+ 
 
 
-const linkedin = document.createElement("a");
-linkedin.href = documentData.linkedin; 
-linkedin.target="_blank"
-
-const icon2 = document.createElement("i");
-icon2.className = "fa fa-envelope me-3 fa-2x"; 
-icon2.style.fontSize = "20px"; 
 
 
-const google = document.createElement("a");
-google.href = documentData.google; 
-google.target="_blank"
 
 
-const icon3 = document.createElement("i");
-icon3.className = "fa fa-github me-3 fa-2x"; 
-icon3.style.fontSize = "20px"; 
 
 
-const git = document.createElement("a");
-git.href = documentData.git; 
-git.target="_blank"
 
 
 // Append the icon and link to the d6
-d6.appendChild(icon);
-d6.appendChild(linkedin);
 
-d6.appendChild(icon2)
-d6.appendChild(google)
-
-d6.appendChild(icon3)
-d6.appendChild(git)
 
 // Append the d6 to the desired location in the DOM (e.g., a parent element)
 
 
-        d3.appendChild(image);
-        d2.appendChild(d3);
+        
+       
         
         d5.appendChild(name);
         d5.appendChild(accomplishment);
-        d5.appendChild(status);
+
+        d2.appendChild(d3);
+        
+
+        d3.appendChild(image);
         
         
         d5.appendChild(college);
-        d5.appendChild(d6)
+        
 
         d4.appendChild(d5);
         d2.appendChild(d4);
