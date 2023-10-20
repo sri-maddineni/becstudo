@@ -1,0 +1,357 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Results</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            button{
+                min-width: 100px;
+                height: 50px;
+                margin: 20px;
+                font-size: 35px;
+            }
+            td{
+                font-size: 30px;
+            }
+            #b{
+                color:brown;
+            }
+
+            
+        .dropdown:hover .dropdown-menu{
+            display: block;
+
+        }
+
+        .dropdown-item:hover{
+          background-color: rgba(0, 0, 0, 0.255);
+        }
+
+        #demo{
+            width: 80%;
+            height: 50%;
+            height: 50%;;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card{
+          margin: 20px;
+          padding: 10px;
+          background-color:rgba(222, 184, 135, 0.825);
+        }
+        </style>
+    </head>
+    <body >
+        <header class="bg-dark text-white text-center py-4">
+            <h1 class="mt-3">BEC Studo</h1>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="--bs-bg-opacity: .8;">
+            <div class="container-fluid ">
+              <a class="navbar-brand text-warning" href="../index.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navi" aria-controls="navi" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navi">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active p-3" aria-current="page disabled" href="#">Hostels</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active p-3" aria-current="page disabled" href="#">Rooms</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-white p-3 disabled" href="#" id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false">
+                      Food
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item disabled" href="#">Mess</a></li>
+                      <li><a class="dropdown-item disabled" href="#">Curry Points</a></li>
+                      <li><a class="dropdown-item disabled" href="#">Restaurants</a></li>
+                      <li><a class="dropdown-item disabled" href="#">Biryani Points</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-white p-3 disabled" href="#" data-bs-toggle="dropdown"> Academics  </a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item disabled" href="#"> Attendence</a></li>
+                       <li><a class="dropdown-item disabled" href="#"> My Certifications </a></li>
+                       <li><a class="dropdown-item disabled" href="#"> Intenals calc </a></li>
+                       <li><a class="dropdown-item" href="../html/acamaterials.html">Materials (PDF's)</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+            <a class="nav-link text-white p-3 disabled" href="#" data-bs-toggle="dropdown">Placements</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../html/plamaterials.html"> Materials </a></li>
+              <li>
+                <a class="dropdown-item disabled" href="#">Student Experience</a>
+                <!-- Submenu for Awaz -->
+                <ul class="submenu">
+                  <li><a class="dropdown-item disabled" href="#">Y20</a></li>
+                  
+                </ul>
+              </li>
+             
+              
+            </ul>
+          </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link text-white p-3 disabled" href="#" data-bs-toggle="dropdown"> Student organisations  </a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item disabled" href="#"> Awaz</a></li>
+                       <li><a class="dropdown-item disabled" href="#"> CCA </a></li>
+                       <li><a class="dropdown-item disabled" href="#"> SAC </a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link text-white p-3" href="#" data-bs-toggle="dropdown"> Results  </a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="../html/y20results.html"> Y20</a></li>
+                       <li><a class="dropdown-item disabled" href="../html/y21results.html"> Y21 </a></li>
+                       <li><a class="dropdown-item disabled" href="#"> Y22 </a></li>
+                       <li><a class="dropdown-item disabled" href="#"> Y23 </a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link active p-3" aria-current="page disabled" href="#">Alumni</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-white p-3 disabled" href="#" data-bs-toggle="dropdown"> Others  </a>
+                     <ul class="dropdown-menu">
+                       <!--
+                         <li><a class="dropdown-item" href="html/othercollegeplacements.html"> Other college Placements</a></li>
+                       -->
+                       <li><a class="dropdown-item" href="../html/coupons.html"> Coupons </a></li>
+                       <li><a class="dropdown-item" href="../html/services.html"> Services </a></li>
+                       
+                     </ul>
+                 </li>
+                </ul>
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link me-auto text-white p-2 disabled" href="#" data-bs-toggle="dropdown"> About  </a>
+                         <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="html/developers.html"> Developers</a></li>
+                           
+                         </ul>
+                     </li>
+                </ul>
+                
+                
+               <button class="btn btn-success m-3" type="button">Login</button>
+               <button class="btn btn-success m-3" type="button">Sign up</button>
+          
+                
+              </div>
+            </div>
+          </nav>
+        <h1 class="text-center">STUDENT MARKS</h1>
+        <a href="http://becbapatla.ac.in:8080/STUDENTINFO/index_r20.html" target="_blank"><button>R20</button></a>
+        <a href="http://becbapatla.ac.in:8080/STUDENTINFO/index_r18.html" target="_blank"><button>R18</button></a>
+        <a href="http://becbapatla.ac.in:8080/STUDENTINFO/index.html" target="_blank"><button>R14/R10 students info</button></a>
+        <a href="http://www.becbapatla.ac.in/pages/results" target="_blank"><button>Results page</button></a>
+        <hr>
+        <center><h2><u>Y21 Results</u></h2></center>
+        <table>
+            <tr>
+                <td><button id="b">IT </button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_3t4l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_6t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_6t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_4t3l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t3l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">CSE </button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_3t4l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_6t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t3l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t3l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">ECE</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_4t3l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_6t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_6t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_6t3l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html"  target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_6t3l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">EEE</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_3t4l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_6t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t4l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t4l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t4l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">CB</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_4t3l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_5t4l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t3l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t3l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">DS</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_4t3l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_5t4l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t3l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t3l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html"  target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t3l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">MECH</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_5t3l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_4t4l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t4l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t4l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_4t4l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_4t5l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">CIVIL</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_5t3l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_4t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t4l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t4l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html" target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t4l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+            <tr>
+                <td><button id="b">EIE</button></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/11_r20_reg_jul21_4t4l.html" target="_blank"><button>1.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/12_r20_reg_oct21_5t3l.html" target="_blank"><button>1.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/21_r20_reg_mar22_5t4l.html" target="_blank"><button>2.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/22_r20_reg_aug22_5t4l.html" target="_blank"><button>2.2</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/31_r20_reg_feb23_5t3l.html"  target="_blank"><button>3.1</button></a></td>
+                <td><a href="http://www.becbapatla.ac.in:8080/collegeresults/32_r20_reg_aug23_5t4l.html" target="_blank"><button>3.2</button></a></td>
+                <td><a href="" target="_blank"><button>4.1</button></a></td>
+                <td><a href="" target="_blank"><button>4.2</button></a></td>
+            </tr>
+        </table>
+
+        
+ <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        
+        <a href="https://www.itkonnects.com" target="_blank" class="me-4 text-danger" style="text-decoration: none;"> 
+          <i class="fa fa-google me-3 fa-2x"></i>
+        </a> 
+        <a href="https://www.instagram.com/bec_startup/" target="_blank" class="me-4 text-danger" style="text-decoration: none;">
+          <i class="fa fa-instagram me-3 fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/95768956/" target="_blank" class="me-4 text-danger" style="text-decoration: none;">
+          <i class="fa fa-linkedin me-3 fa-2x"></i>
+        </a>
+        <a href="#" target="_blank" class="me-4 text-danger" style="text-decoration: none;">
+          <i class="fa fa-github me-3 fa-2x"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>iTKonnects
+            </h6>
+            <p>
+                A service oriented non-profit organisation to make it easier connecting with technology
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fa fa-home me-3"></i> Bapatla, 522102, A.P</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>
+              itkonnects@gmail.com
+            </p>
+            <p><i class="fa fa-phone me-3"></i> +91 63042 14514</p>
+            
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://www.itkonnects.com/">iTKonnects.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+      
+      
+      
+      
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+    </html>
+    
