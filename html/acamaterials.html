@@ -9,6 +9,28 @@
     <script src="../js/acamaterials.js"></script>
   <style>
 
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    
+    display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
         .dropdown:hover .dropdown-menu{
             display: block;
 
@@ -146,10 +168,14 @@
           <div class="col-lg-6 mx-auto" aria-required="true">
               <input type="text" name="username" id="reg" class="form-control mb-30" placeholder="Enter reg no" required style="margin:15px;">
               <button onclick="getm()">Submit</button>
-            </div>
           </div>
+        </div>
+
+        <div id="spinner" class="spinner"></div>
         
-        <div id="documents"></div>
+        <div id="documents">
+          
+        </div>
       </div>
   
 

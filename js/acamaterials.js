@@ -2,6 +2,8 @@ function getm(){
 
   document.getElementById("documents").innerHTML=""
 
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'block';
   
   var firebaseConfig = {
     apiKey: "AIzaSyBSd0FFY4jYumI731SXaZ1RpAEXsrp6fog",
@@ -100,5 +102,12 @@ querySnapshot.forEach(function(doc) {
   documentsDiv.appendChild(d1);
 });
 });
+
+
+setTimeout(() => {
+  // Hide the spinner after your function completes
+  spinner.style.display = 'none';
+}, 1000);
+
 
 }
