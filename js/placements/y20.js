@@ -2,6 +2,8 @@ function mainer(){
 
 
   var card=document.getElementById("cardContainer");
+  var tit=document.getElementById("deptheading");
+  tit.innerHTML="Y20 Placements"
   card.innerHTML='';
   var imageslist = [
       "https://www.snovasys.com/wp-content/uploads/2016/10/Snovasys.png",
@@ -237,7 +239,7 @@ function get(x, y) {
       card.innerHTML = `
         <div class="card shadow-lg col mt-4  mx-auto">
               <div class="card-header bg-success container-fluid">
-                  <p class="h4 text-dark">${data.name}</p>
+                  <p class="h4 text-white">${data.name}</p>
               </div>
             <div class="card-body">
                 <p class="card-text">${data.regno.toUpperCase()}</p>
