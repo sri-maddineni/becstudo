@@ -42,7 +42,7 @@ function mainer() {
 
             console.log(imageslist, companylist)
 
-            generatecard(imageslist,companylist)
+            generatecard(imageslist,companylist,links)
         })
         .catch((error) => {
             console.error("Error getting documents: ", error);
