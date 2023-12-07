@@ -40,7 +40,7 @@ function mainer() {
             companylist=querySnapshot.data().companies;
             links=querySnapshot.data().links;
 
-            console.log(imageslist, companylist)
+            console.log(imageslist, companylist,links)
 
             generatecard(imageslist,companylist,links)
         })
@@ -66,7 +66,7 @@ function mainer() {
             <div class="card-body">
                 <img src="${item}" style="width:150px; height:150px" alt="error"/>
                 <br/><br/>
-                <a href="${links[index]}" class="text-warning btn btn-success">Know about company!</a>
+                <a href="${links[index]}" target="_blank" class="text-warning btn btn-success">Know about company!</a>
                 </div>
             </div>
         </div>
