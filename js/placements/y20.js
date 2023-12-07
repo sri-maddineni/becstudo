@@ -29,6 +29,7 @@ function mainer() {
 
     var companylist = [];
     var imageslist = [];
+    var links=[];
 
     db.collection(`/becstuoweb/navigation/placements/`)
         .doc("companylist")
@@ -37,6 +38,7 @@ function mainer() {
 
             imageslist =querySnapshot.data().images;
             companylist=querySnapshot.data().companies;
+            links=querySnapshot.data().links;
 
             console.log(imageslist, companylist)
 
@@ -51,7 +53,7 @@ function mainer() {
 
 
 
-    function generatecard(imageslist, clist){
+    function generatecard(imageslist, clist,links){
         imageslist.forEach(function (item, index) {
             const card = document.createElement("div");
             card.className = "col-md-3 mb-4";
@@ -64,7 +66,7 @@ function mainer() {
             <div class="card-body">
                 <img src="${item}" style="width:150px; height:150px" alt="error"/>
                 <br/><br/>
-                <a href="#" class="text-warning btn btn-success">Know about company!</a>
+                <a href="${links[index]}" class="text-warning btn btn-success">Know about company!</a>
                 </div>
             </div>
         </div>
