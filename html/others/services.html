@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Y20 Placements | BEC Studo</title>
+  <title>Services | BEC Studo</title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,8 @@
     }
 
     .btnwidth{
-      width: 100px;
+      
+      width: 150px;
     }
 
     .dropdown-item:hover {
@@ -79,6 +80,7 @@
     }
 
     main {
+     
       flex: 1;
       display: flex;
     }
@@ -130,12 +132,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link text-white p-3 disabled" href="#" data-bs-toggle="dropdown">Placements</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../plamaterials.html">Placement Materials </a></li>
+              <li><a class="dropdown-item disabled" href="../plamaterials.html">Placement Materials </a></li>
               <li>
                 <a class="dropdown-item disabled" href="#">Placement offers</a>
                 <!-- Submenu for Awaz -->
                 <ul class="submenu">
-                  <li><a class="dropdown-item disabled" href="./html/placements/y20placements.html">Y20 Placements</a>
+                  <li><a class="dropdown-item" href="../html/placements/y20placements.html">Y20 Placements</a>
                   </li>
                 </ul>
               </li>
@@ -170,7 +172,7 @@
                      <li><a class="dropdown-item" href="../html/othercollegeplacements.html"> Other college placements</a></li>
                    -->
               <li><a class="dropdown-item" href="../../html/coupons.html"> Coupons </a></li>
-              <li><a class="dropdown-item" href="../others/services.html"> Services </a></li>
+              <li><a class="dropdown-item disabled" href="../../html/services.html"> Services </a></li>
 
 
             </ul>
@@ -180,7 +182,7 @@
           <li class="nav-item dropdown active">
             <a class="nav-link me-auto text-white p-2 disabled" href="#" data-bs-toggle="dropdown"> About </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../../html/developers.html"> Developers</a></li>
+              <li><a class="dropdown-item" href="../html/developers.html"> Developers</a></li>
               <li><a class="dropdown-item disabled" href="#"> Y21 </a></li>
               <li><a class="dropdown-item disabled" href="#"> Y22 </a></li>
               <li><a class="dropdown-item disabled" href="#"> Y23 </a></li>
@@ -201,18 +203,19 @@
 
     <aside>
       <button class="btn btn-success my-3 mx-5 text-center" onclick="mainer()">Home</button><br>
-      <h2 class="my-3">Departments</h2>
+      <h2 class="my-3">&nbsp;Categories</h2>
       <ul>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('it','IT')">IT</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('cs','CSE')">CSE</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('cb','CB')">CB</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('ds','DS')">DS</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('ec','ECE')">ECE</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('ee','EEE')">EEE</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('ei','EIE')">EIE</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('ce','CIVIL')">CIVIL</button><br>
-        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="get('me','MECH')">MECH</button>
-  
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('auto','AUTO')">AUTO</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('food','FOOD')">FOOD</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('med','MEDICAL')">MEDICAL</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('ele','ELECTRICAL')">ELECTRICAL</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('studio','STUDIO')">STUDIO</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('computers','COMPUTERS')">COMPUTERS</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('furniture','FURNITURE')">FURNITURE</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('clothing','CLOTHING')">CLOTHING</button><br>
+        <button class="btn btn-warning my-3 mx-auto btnwidth" onclick="getter('xerox','XEROX')">XEROX</button><br>
+        
+       
       </ul>
     </aside>
   
@@ -230,10 +233,13 @@
         -->
   
     <main>
-      <div class="container mt-4">
-        <p id="deptheading" class="h1 text-center text-white bg-dark"></p>
+      <div class="container-fluid mt-4">
+        <div class="container">
+          <p id="deptheading" class="h1 text-center text-white bg-dark"></p>
+        </div>
+        
         <div class="row" id="cardContainer">
-          <script src="../../js/placements/y20.js" onload="mainer()"></script>
+          <script src="../../js/others/services.js" onload="mainer()"></script>
         </div>
       </div>
     </main>
@@ -321,6 +327,16 @@
     </div>
     <!-- Copyright -->
   </footer>
+
+
+  
+
+
+
+
+
+
+
 </body>
 
 </html>
