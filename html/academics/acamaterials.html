@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Academics Materials</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | BEC Studo</title>
+    <link rel="icon" type="image/x-icon" href="../../images/blogo.png">
+    <title>Academic Materials | BEC Studo</title>
     <meta name="description" content="BEC Studo , for the students of Bapatla Engineering College, Features includes Food & Accomodation, Rooms, Study Materials, Placement Guidance, Coupons, Services etc..,">
     <meta name="keywords" content="BEC Studo, iTKonnects, itkonnects, bapatla engineering college">
     <meta name="author" content="srihari maddineni">
-    
-
-    <link rel="icon" type="image/x-icon" href="../../images/blogo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Hotjar Tracking Code for https://www.becstudo.itkonnects.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3691429,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script src="../js/acamaterials.js"></script>
+  <style>
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 75px;
+    height: 75px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
     
-    <style>
+    display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
-.dropdown:hover .dropdown-menu{
+        .dropdown:hover .dropdown-menu{
             display: block;
 
         }
@@ -42,11 +48,20 @@
           background-color: rgba(0, 0, 0, 0.255);
         }
 
-        
+        #demo{
+            width: 80%;
+            height: 50%;
+            height: 50%;;
+            margin: auto;
+            padding: 20px;
+        }
 
-        
-    </style>
-    
+        .card{
+          margin: 20px;
+          padding: 10px;
+          background-color:rgba(222, 184, 135, 0.825);
+        }
+  </style>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-4">
@@ -54,7 +69,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="--bs-bg-opacity: .8;">
       <div class="container-fluid ">
-        <a class="navbar-brand text-warning" href="">Home</a>
+        <a class="navbar-brand text-warning" href="../../index.html">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navi" aria-controls="navi" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,8 +101,8 @@
                  <li><a class="dropdown-item" target="_blank" href="https://play.google.com/store/apps/details?id=com.internalscalci1.internalscalci&hl=en-IN"> Intenals calc </a></li>
                  <li><a class="dropdown-item" href="../academics/techies.html">Techies</a></li>
                  <li><a class="dropdown-item" href="../academics/previouspapers.html">Previous papers</a></li>
-                 <li><a class="dropdown-item" href="../academics/acamaterials.html">Materials (PDF's)</a></li>
-                 <li><a class="dropdown-item disabled" href="../acamaterials.html">Other important links</a></li>
+                 <li><a class="dropdown-item" href="html/academics/acamaterials.html">Materials (PDF's)</a></li>
+                 <li><a class="dropdown-item disabled" href="html/acamaterials.html">Other important links</a></li>
                </ul>
            </li>
            <li class="nav-item dropdown">
@@ -141,7 +156,7 @@
               <li class="nav-item dropdown active">
                   <a class="nav-link me-auto text-white p-2 disabled" href="#" data-bs-toggle="dropdown"> About  </a>
                    <ul class="dropdown-menu">
-                     <li><a class="dropdown-item disabled" href="../about/developers.html"> Developers</a></li>
+                     <li><a class="dropdown-item disabled" href="html/developers.html"> Developers</a></li>
                      <li><a class="dropdown-item disabled" href="#"> Y21 </a></li>
                      <li><a class="dropdown-item disabled" href="#"> Y22 </a></li>
                      <li><a class="dropdown-item disabled" href="#"> Y23 </a></li>
@@ -158,21 +173,30 @@
       </div>
     </nav>
 
-      
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <div>
+        <div class="row">
+          <div class="col-lg-6 mx-auto" aria-required="true">
+              <input type="text" name="username" id="reg" class="form-control mb-30" placeholder="Enter reg no" required style="margin:15px;">
+              <button onclick="getm()">Submit</button>
+          </div>
+        </div>
 
-      
-      
-      
-      <div class="row" id="cardContainer">
-        <script src="../../js/Food/Hotels.js" onload="Loaddata()"></script>
+        <div id="spinner" class="spinner"></div>
+        
+        <div id="documents">
+          
+        </div>
       </div>
-     
-      
+  
 
-   
- <!-- Footer -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/acamaterials.js"></script>
+
+  
+
+
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -214,7 +238,7 @@
               <i class="fas fa-gem me-3"></i>iTKonnects
             </h6>
             <p>
-               A nonprofit organization with a service-oriented focus dedicated to facilitating enhanced connectivity with technology.
+                A service oriented non-profit organisation to make it easier connecting with technology
             </p>
           </div>
           <!-- Grid column -->
@@ -254,9 +278,5 @@
       
       
     
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-      
 </body>
 </html>
